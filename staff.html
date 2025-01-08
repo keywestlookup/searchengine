@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyWest - Main</title>
+    <style>
+        /* Global settings */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: rgb(22, 22, 22);
+            background-size: 400% 400%;
+            animation: gradient-animation 10s infinite ease-in-out;
+            color: white;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: rgb(5, 0, 5);
+            padding: 20px;
+            color: rgb(253, 252, 252);
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li button {
+            width: 100%;
+            padding: 8px;
+            background-color: #a80bbd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li button:hover {
+            background-color: black;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .main-content h1 {
+            color: #a80bbd;
+        }
+
+        .search-bar {
+            padding: 10px;
+            width: 300px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ffffff;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ffffff;
+            text-align: left;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #a80bbd;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; 
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #070008;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>KeyWest Panel</h2>
+            <ul>
+                <li><button class="btn" onclick="window.location.href='staff.html';">🏠 Home</button></li>
+                <li><button class="btn" onclick="window.location.href='infos.html';">📖 Informations Wiki</button></li>
+                <li><button class="btn" onclick="window.location.href='gestionj.html';">📒 Management</button></li>
+                <li><button class="btn" onclick="window.location.href='params.html';">⚙️ Settings</button></li>
+                
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Bienvenue : "<span id="usernameDisplay"></span>" sur votre tableau de bord 🖥️</h1>
+            <h4>Grade : Fonction Indisponible</h4>
+            <h5>Site Web Version : 1.0 🌐</h4>
+
+            <h2>Liste des utilisateurs</h2>
+            <input type="text" id="searchInput" class="search-bar" placeholder="Rechercher par nom...">
+
+            <table id="playersTable">
+                <thead>
+                    <tr>
+                        <th>Nom d'utilisateur 👤</th>
+                        <th>Prénom / Nom 🖊️</th>
+                        <th>Discord ID 🪪</th>
+                        <th>E-Mail 📩</th>
+                        <th>Adress 🏢</th>
+                        <th>IP 🔪</th>
+                        <th>Country & Region 🏕️</th>
+                        <th>Notes 🧷</th>
+                    </tr>
+                </thead>
+                <tbody id="playersList">
+                </tbody>
+            </table>
+
+            <button id="logoutBtn" class="btn">Se déconnecter</button>
+            <h5>Connecté</h5>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://click123.ca/dist/js/snow.js"></script>
+</body>
+</html>
