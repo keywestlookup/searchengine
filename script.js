@@ -20,8 +20,8 @@ const users = [
         "isStaff": true
     },
     {
-        "username": "Keyroz",
-        "password": "Keyroz123",
+        "username": "Kayzop",
+        "password": "Kayzop",
         "isStaff": true
     },
     {
