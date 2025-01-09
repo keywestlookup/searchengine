@@ -20,6 +20,11 @@ const users = [
         "isStaff": true
     },
     {
+        "username": "Keyroz",
+        "password": "Keyroz123",
+        "isStaff": true
+    },
+    {
         "username": "Loligo",
         "password": "Loligo123",
         "isStaff": true
